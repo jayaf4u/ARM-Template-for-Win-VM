@@ -1,0 +1,9 @@
+Open Powershell in Admin Mode and enter command as
+	connect-azaccount
+Validate with your Azure Credentials 
+Now Create Azure resource Gropu with Below command
+	New-AzResourceGroup -ResourceGroupName armwinrg -Location EastUS
+After creation of ResourceGroup enter below command for VM Creation
+	New-AzResourceGroupDeployment -ResourceGroupName armwinrg -TemplateFile G:\arm\azuredeploy.json -TemplateParameterFile G:\arm\azuredeploy.parameters.json
+	
+VM will be created Sucessfully 
